@@ -14,5 +14,5 @@ var isSetingUp = false;
 var begin, obs = [], end;
 
 
-
-
+var path = [];
+const DIR_R = 1, DIR_L = - 1, DIR_T = -total, DIR_B =  total;

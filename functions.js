@@ -67,18 +67,23 @@ function initSteps() {
 
 function expectedNeighboursIndex(idx) {
     return [
-        idx + 1, idx - 1, idx + total, idx - total,
+        idx + DIR_T,
+        idx + DIR_B, 
+        idx + DIR_L,
+        idx + DIR_R, 
         // idx - 1 - total, idx - 1 + total, idx + total + 1, idx - total + 1
     ];
 }
-
+function randDir(){
+    return randElmt([DIR_L, DIR_T, DIR_B, DIR_R]);
+}
 function isObs(step) {
     return obs.includes(step);
 }
 function neighboursIndex(idx) {
     let value = [];
     for (const expectedIndex of expectedNeighboursIndex(idx)) {
-        if (steps[expectedIndex] == null || steps[expectedIndex] == undefined || isObs(steps[expectedIndex]) )
+        if (steps[expectedIndex] == null || steps[expectedIndex] == undefined || isObs(steps[expectedIndex]))
             continue;
         if (idx % total == 0) {
             if (expectedIndex == idx - 1)
@@ -119,4 +124,16 @@ function hideNeighbours(step = domId()) {
 
         // steps[i].classList.add("text-white");
     }
+}
+
+function rand(max, min = 0) {
+    return parseInt(Math.random() * (max - min) + min);
+}
+
+function randElmt(arr = []) {
+    return arr[rand(arr.length)];
+}
+function randomNeighbourIndex(idx) {
+
+    return randElmt(neighboursIndex(idx));
 }
