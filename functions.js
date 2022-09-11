@@ -23,7 +23,7 @@ function initSteps() {
             tr.appendChild(th);
 
             let idx = steps.length;
-            th.innerText = idx;
+            // th.innerText = idx;
             th.setAttribute("index", idx);
             steps.push(th);
 

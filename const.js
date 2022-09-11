@@ -6,7 +6,7 @@ function domId(id) {
 const container = domId("container");
 const stp_btn = domId("stp_btn");
 const find_btn = domId("find_btn");
-const total = 12;
+const total = 30;
 const stepFlex = 100 / total;
 const steps = [];
 var setStart = true, setEnd = false, setObs = false;
