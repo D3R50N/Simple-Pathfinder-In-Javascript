@@ -1,0 +1,35 @@
+:root {
+    --w: 90%;
+    --h: 80vh;
+    --l: 5%;
+}
+
+.btns {
+    padding: 10px;
+    position: relative;
+    width: var(--w);
+    left: 4%;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    width: 40%;
+}
+
+#container {
+    position: relative;
+    width: var(--w);
+    height: var(--h);
+    left: var(--l);
+
+    border: 2px solid;
+}
+
+.step:hover{
+    background-color : #0001;
+    
+}
+.step{
+    cursor: pointer;
+}
